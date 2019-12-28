@@ -6,14 +6,14 @@ const colors = require('colors');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
-// route files
-const bootcamps = require('./routes/bootcamps');
-
 // load env vars
 dotenv.config({ path: './config/config.env' });
 
 // connect to database
 connectDB();
+
+// route files
+const bootcamps = require('./routes/bootcamps');
 
 const app = express();
 
