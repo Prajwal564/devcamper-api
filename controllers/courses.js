@@ -76,8 +76,8 @@ exports.addCourse = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc    Delete course
-// @route   DELETE /api/v1/courses/:id
+// @desc    Update course
+// @route   PUT /api/v1/courses/:id
 // @access  Private
 exports.updateCourse = asyncHandler(async (req, res, next) => {
   let course = await Course.findById(req.params.id);
